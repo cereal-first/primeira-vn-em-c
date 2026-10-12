@@ -16,13 +16,11 @@ typedef struct
     Texture2D bgRua;
 
 
-    // botões
+    // botões do menu: [botão][estado]
+    // botão: 0 novo jogo, 1 continuar, 2 créditos, 3 sair
+    // estado: 0 normal, 1 hover, 2 pressed
 
-    Texture2D newGameNormal;
-
-    Texture2D newGameHover;
-
-    Texture2D newGamePressed;
+    Texture2D menuButtons[4][3];
 
     Texture2D logo;
 

@@ -16,6 +16,9 @@ int main(void)
 
     SetTargetFPS(60);
 
+    // ESC nao fecha mais o jogo (ele volta ao menu)
+    SetExitKey(KEY_NULL);
+
     Assets assets;
 
     LoadAssets(&assets);
@@ -25,7 +28,7 @@ int main(void)
     InitGame(&game);
 
 
-    while (!WindowShouldClose())
+    while (!WindowShouldClose() && !game.shouldExit)
     {
         UpdateGame(&game);
 

@@ -12,7 +12,8 @@
 typedef enum
 {
     SCREEN_MENU,
-    SCREEN_GAME
+    SCREEN_GAME,
+    SCREEN_CREDITS
 } GameScreen;
 
 
@@ -26,6 +27,8 @@ typedef struct
     SceneID currentScene;
 
     int dialogueIndex;
+
+    bool shouldExit;
 
 } GameState;
 

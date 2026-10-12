@@ -6,89 +6,52 @@ void LoadAssets(Assets *assets)
 
     // BACKGROUNDS
 
-    assets->bgPresent =
-        LoadTexture(
-            "assets/backgrounds/quarto_presente.png"
-        );
+    assets->bgPresent = LoadTexture("assets/backgrounds/quarto_presente.png");
+
+    assets->bg2007 = LoadTexture("assets/backgrounds/quarto_2007.png");
+
+    assets->bgRua = LoadTexture("assets/backgrounds/rua.png");
 
 
-    assets->bg2007 =
-        LoadTexture(
-            "assets/backgrounds/quarto_2007.png"
-        );
+    // BOTOES DO MENU (normal, hover, pressed)
 
-    assets->bgRua =
-        LoadTexture(
-            "assets/backgrounds/rua.png"
-        );
-    // NEW GAME
+    static const char *menuPaths[4][3] =
+    {
+        {"assets/ui/novoJogo.png",  "assets/ui/novoJogoHover.png",  "assets/ui/novoJogoHover.png"},
+        {"assets/ui/continuar.png", "assets/ui/continuarHover.png", "assets/ui/continuarHover.png"},
+        {"assets/ui/creditos.png",  "assets/ui/creditosHover.png",  "assets/ui/creditosHover.png"},
+        {"assets/ui/sair.png",      "assets/ui/sairHover.png",      "assets/ui/sairHover.png"}
+    };
 
-    assets->newGameNormal =
-        LoadTexture(
-            "assets/ui/newGameNormal.png"
-        );
+    for (int i = 0; i < 4; i++)
+        for (int j = 0; j < 3; j++)
+            assets->menuButtons[i][j] = LoadTexture(menuPaths[i][j]);
 
 
-    assets->newGameHover =
-        LoadTexture(
-            "assets/ui/newGameHover.png"
-        );
+    // LOGO
 
-
-    assets->newGamePressed =
-        LoadTexture(
-            "assets/ui/newGamePressed.png"
-        );
-
-    assets->logo =
-        LoadTexture(
-            "assets/ui/logo.png"
-        );
-
+    assets->logo = LoadTexture("assets/ui/logo.png");
 
 
     // PERSONAGEM
 
-    assets->liaFrente =
-        LoadTexture(
-            "assets/characters/liaFrente.png"
-        );
+    assets->liaFrente = LoadTexture("assets/characters/liaFrente.png");
 
-
-    assets->liaJovemLado =
-        LoadTexture(
-            "assets/characters/liaJovemLado.png"
-        );
+    assets->liaJovemLado = LoadTexture("assets/characters/liaJovemLado.png");
 }
 
 
 void UnloadAssets(Assets *assets)
 {
-
     UnloadTexture(assets->bgPresent);
-
     UnloadTexture(assets->bg2007);
-    
     UnloadTexture(assets->bgRua);
 
-
-    UnloadTexture(
-        assets->newGameNormal
-    );
-
-    UnloadTexture(
-        assets->newGameHover
-    );
-
-    UnloadTexture(
-        assets->newGamePressed
-    );
-
+    for (int i = 0; i < 4; i++)
+        for (int j = 0; j < 3; j++)
+            UnloadTexture(assets->menuButtons[i][j]);
 
     UnloadTexture(assets->liaFrente);
-
     UnloadTexture(assets->liaJovemLado);
-
     UnloadTexture(assets->logo);
-    
 }
