@@ -11,7 +11,7 @@
 ## 📖 Sobre o jogo
 
 **Re:7** é uma visual novel em C com a biblioteca [raylib](https://www.raylib.com/).
-Lia, uma professora que precisa preparar uma palestra, é levada de volta a **2007** por uma IA.
+Lia, uma desenvolvedora que precisa preparar uma palestra, é levada de volta a **2007** por uma IA.
 Lá, aprende que a IA deve **ajudar**, e não **substituir** quem pensa, e prova isso vencendo um desafio de obstáculos por conta própria.
 
 > 💡 O jogo é **compilado e executado pelo terminal** e abre uma janela.
