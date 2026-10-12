@@ -13,7 +13,9 @@ typedef enum
 {
     SCREEN_MENU,
     SCREEN_GAME,
-    SCREEN_CREDITS
+    SCREEN_CREDITS,
+    SCREEN_MINIGAME,
+    SCREEN_ENDING
 } GameScreen;
 
 

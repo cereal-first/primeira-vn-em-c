@@ -8,6 +8,8 @@ typedef enum
 {
     SCENE_PRESENT,
     SCENE_2007,
+    SCENE_2007_WIN,
+    SCENE_EPILOGUE,
 
     SCENE_COUNT
 

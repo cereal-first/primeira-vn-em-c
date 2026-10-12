@@ -17,10 +17,10 @@ void LoadAssets(Assets *assets)
 
     static const char *menuPaths[4][3] =
     {
-        {"assets/ui/novoJogo.png",  "assets/ui/novoJogoHover.png",  "assets/ui/novoJogoHover.png"},
-        {"assets/ui/continuar.png", "assets/ui/continuarHover.png", "assets/ui/continuarHover.png"},
-        {"assets/ui/creditos.png",  "assets/ui/creditosHover.png",  "assets/ui/creditosHover.png"},
-        {"assets/ui/sair.png",      "assets/ui/sairHover.png",      "assets/ui/sairHover.png"}
+        {"assets/ui/novoJogo.png",  "assets/ui/novoJogoHover.png",  "assets/ui/novoJogoPressed.png"},
+        {"assets/ui/continuar.png", "assets/ui/continuarHover.png", "assets/ui/continuarPressed.png"},
+        {"assets/ui/creditos.png",  "assets/ui/creditosHover.png",  "assets/ui/creditosPressed.png"},
+        {"assets/ui/sair.png",      "assets/ui/sairHover.png",      "assets/ui/sairPressed.png"}
     };
 
     for (int i = 0; i < 4; i++)
@@ -31,6 +31,10 @@ void LoadAssets(Assets *assets)
     // LOGO
 
     assets->logo = LoadTexture("assets/ui/logo.png");
+
+    // AVATAR DA IA
+
+    assets->iaStar = LoadTexture("assets/ui/iaStar.png");
 
 
     // PERSONAGEM
@@ -54,4 +58,5 @@ void UnloadAssets(Assets *assets)
     UnloadTexture(assets->liaFrente);
     UnloadTexture(assets->liaJovemLado);
     UnloadTexture(assets->logo);
+    UnloadTexture(assets->iaStar);
 }

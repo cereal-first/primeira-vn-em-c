@@ -37,6 +37,32 @@ Scene GetScene(SceneID id)
         }
 
 
+        case SCENE_2007_WIN:
+        {
+            Scene scene =
+            {
+                room2007WinDialogues,
+                GetRoom2007WinDialogueCount(),
+                SCENE_EPILOGUE
+            };
+
+            return scene;
+        }
+
+
+        case SCENE_EPILOGUE:
+        {
+            Scene scene =
+            {
+                epilogueDialogues,
+                GetEpilogueDialogueCount(),
+                SCENE_PRESENT
+            };
+
+            return scene;
+        }
+
+
         default:
         {
             Scene empty = {0};

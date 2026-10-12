@@ -24,6 +24,10 @@ typedef struct
 
     Texture2D logo;
 
+    // avatar da IA (estrela do logo)
+
+    Texture2D iaStar;
+
 
     // personagens
 
